@@ -39,7 +39,14 @@
     PrecisionRule="true"
     EntityAttrName="Ime"
     EntityUsage="MDjelatnici"
-    AliasName="IME"/>
+    AliasName="IME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="hr.fet.idomacice.model.MDjelatniciVO.Ime_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Prezime"
     IsNotNull="true"
@@ -47,4 +54,8 @@
     EntityAttrName="Prezime"
     EntityUsage="MDjelatnici"
     AliasName="PREZIME"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="hr.fet.idomacice.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>
