@@ -34,6 +34,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="4"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="hr.fet.idomacice.model.MDjelatnici.Sifra_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Ime"
@@ -81,4 +87,8 @@
       <Item Value="hr.fet.idomacice.model.MDjelatnici.Id"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="hr.fet.idomacice.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>
