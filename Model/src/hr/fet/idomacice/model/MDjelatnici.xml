@@ -20,7 +20,14 @@
     Type="java.math.BigInteger"
     ColumnType="NUMBER"
     TableName="M_DJELATNICI"
-    PrimaryKey="true"/>
+    PrimaryKey="true">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="hr.fet.idomacice.model.MDjelatnici.Id_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Sifra"
     IsUnique="true"
