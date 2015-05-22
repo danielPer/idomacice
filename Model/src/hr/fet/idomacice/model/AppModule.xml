@@ -9,4 +9,7 @@
   <ViewUsage
     Name="MDjelatnici1"
     ViewObjectName="hr.fet.idomacice.model.MDjelatniciVO"/>
+  <ViewUsage
+    Name="MOzn1View1"
+    ViewObjectName="hr.fet.idomacice.model.MOzn1View"/>
 </AppModule>

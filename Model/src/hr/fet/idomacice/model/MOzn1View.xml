@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="windows-1250" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="MOzn1View"
+  Version="11.1.2.64.36"
+  SelectList="MOzn1.ID, 
+       MOzn1.OPIS"
+  FromList="M_OZN1 MOzn1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <EntityUsage
+    Name="MOzn1"
+    Entity="hr.fet.idomacice.model.MOzn1"/>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="MOzn1"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="Opis"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Opis"
+    EntityUsage="MOzn1"
+    AliasName="OPIS"/>
+</ViewObject>
