@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:trh="http://myfaces.apache.org/trinidad/html" xmlns:tr="http://myfaces.apache.org/trinidad">
+    <trh:html>
+        <trh:head title="untitled1"/>
+        <trh:body>
+            <tr:messages/><h:form>
+                <tr:table value="#{bindings.MOzn1View1.collectionModel}" var="row"
+                          rows="#{bindings.MOzn1View1.rangeSize}"
+                          emptyText="#{bindings.MOzn1View1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          selectedRowKeys="#{bindings.MOzn1View1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.MOzn1View1.collectionModel.makeCurrent}" rowSelection="single">
+                    <tr:column sortProperty="#{bindings.MOzn1View1.hints.Id.name}" sortable="true"
+                               headerText="#{bindings.MOzn1View1.hints.Id.label}">
+                        <tr:inputText value="#{row.bindings.Id.inputValue}" simple="true"
+                                      required="#{bindings.MOzn1View1.hints.Id.mandatory}"
+                                      columns="#{bindings.MOzn1View1.hints.Id.displayWidth}"
+                                      maximumLength="#{bindings.MOzn1View1.hints.Id.precision}">
+                            <f:validator binding="#{row.bindings.Id.validator}"/>
+                        </tr:inputText>
+                    </tr:column>
+                    <tr:column sortProperty="#{bindings.MOzn1View1.hints.Opis.name}" sortable="true"
+                               headerText="#{bindings.MOzn1View1.hints.Opis.label}">
+                        <tr:inputText value="#{row.bindings.Opis.inputValue}" simple="true"
+                                      required="#{bindings.MOzn1View1.hints.Opis.mandatory}"
+                                      columns="#{bindings.MOzn1View1.hints.Opis.displayWidth}"
+                                      maximumLength="#{bindings.MOzn1View1.hints.Opis.precision}">
+                            <f:validator binding="#{row.bindings.Opis.validator}"/>
+                        </tr:inputText>
+                    </tr:column>
+                </tr:table>
+            </h:form>
+        </trh:body>
+    </trh:html>
+    <!--oracle-jdev-comment:deviceCategory:pda-->
+</f:view>
