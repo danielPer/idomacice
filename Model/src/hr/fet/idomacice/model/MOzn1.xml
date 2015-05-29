@@ -18,7 +18,14 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="M_OZN1"
-    PrimaryKey="true"/>
+    PrimaryKey="true">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="hr.fet.idomacice.model.MOzn1.Id_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Opis"
     IsNotNull="true"
@@ -42,4 +49,8 @@
       <Item Value="hr.fet.idomacice.model.MOzn1.Id"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="hr.fet.idomacice.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>
