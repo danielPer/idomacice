@@ -21,5 +21,13 @@
     </tree>
     <action IterBinding="MOzn1View1Iterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
     <action IterBinding="MOzn1View1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <tree IterBinding="MOzn1View1Iterator" id="MOzn1View1">
+      <nodeDefinition DefName="hr.fet.idomacice.model.MOzn1View" Name="MOzn1View10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Opis"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>
