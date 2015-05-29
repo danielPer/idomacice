@@ -29,5 +29,15 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <tree IterBinding="MDjelatnici1Iterator" id="MDjelatnici11">
+      <nodeDefinition DefName="hr.fet.idomacice.model.MDjelatniciVO" Name="MDjelatnici110">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Sifra"/>
+          <Item Value="Ime"/>
+          <Item Value="Prezime"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>
