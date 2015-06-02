@@ -25,6 +25,7 @@
    <list n="listOfChildren">
       <hash><url n="URL" path="Model/Model.jpr"/></hash>
       <hash><url n="URL" path="Project1/Project1.jpr"/></hash>
+      <hash><url n="URL" path="Project2/Project2.jpr"/></hash>
    </list>
    <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
       <hash n="profileDefinitions">
