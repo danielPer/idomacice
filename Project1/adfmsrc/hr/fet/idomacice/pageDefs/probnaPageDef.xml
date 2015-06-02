@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.64.36" id="probnaPageDef"
+                Package="hr.fet.idomacice.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="MDjelatnici1" RangeSize="25" DataControl="AppModuleDataControl" id="MDjelatnici1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="MDjelatnici1Iterator" id="MDjelatnici1">
+      <nodeDefinition DefName="hr.fet.idomacice.model.MDjelatniciVO" Name="MDjelatnici10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Sifra"/>
+          <Item Value="Ime"/>
+          <Item Value="Prezime"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

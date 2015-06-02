@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:trh="http://myfaces.apache.org/trinidad/html" xmlns:tr="http://myfaces.apache.org/trinidad">
+  <trh:html id="h1">
+    <trh:head title="probna" id="h2"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;
+maximum-scale=1.0; user-scalable=0;"
+xmlns="http://www.w3.org/1999/xhtml"/>
+    <trh:body id="b1">
+      <tr:messages id="m1"/><h:form id="f1">
+        <p xmlns="http://www.w3.org/1999/xhtml">
+          <tr:panelHeader text="panelHeader 1" id="ph2" styleClass="af_m_toolbar"/>
+        </p>
+        <tr:panelPageHeader id="pph1" styleClass="af_m_toolbar"/>
+        <p xmlns="http://www.w3.org/1999/xhtml">
+          <tr:panelPageHeader id="pph2" styleClass="af_m_toolbar"/>
+        </p>
+        <tr:commandButton text="Početna" id="cb1" styleClass="af_m_button"/>
+        <tr:commandButton text="commandButton 1" id="cb2" styleClass="af_m_backButton"/>
+        <tr:table value="#{bindings.MDjelatnici1.collectionModel}" var="row" rows="#{bindings.MDjelatnici1.rangeSize}"
+                  emptyText="#{bindings.MDjelatnici1.viewable ? 'No data to display.' : 'Access Denied.'}" id="t1">
+          <tr:column sortProperty="#{bindings.MDjelatnici1.hints.Id.name}" sortable="false"
+                     headerText="#{bindings.MDjelatnici1.hints.Id.label}" id="c1">
+            <tr:inputText value="#{row.bindings.Id.inputValue}" simple="true"
+                          required="#{bindings.MDjelatnici1.hints.Id.mandatory}"
+                          columns="#{bindings.MDjelatnici1.hints.Id.displayWidth}"
+                          maximumLength="#{bindings.MDjelatnici1.hints.Id.precision}" id="it1">
+              <f:validator binding="#{row.bindings.Id.validator}"/>
+            </tr:inputText>
+          </tr:column>
+          <tr:column sortProperty="#{bindings.MDjelatnici1.hints.Sifra.name}" sortable="false"
+                     headerText="#{bindings.MDjelatnici1.hints.Sifra.label}" id="c2">
+            <tr:inputText value="#{row.bindings.Sifra.inputValue}" simple="true"
+                          required="#{bindings.MDjelatnici1.hints.Sifra.mandatory}"
+                          columns="#{bindings.MDjelatnici1.hints.Sifra.displayWidth}"
+                          maximumLength="#{bindings.MDjelatnici1.hints.Sifra.precision}" id="it2">
+              <f:validator binding="#{row.bindings.Sifra.validator}"/>
+            </tr:inputText>
+          </tr:column>
+          <tr:column sortProperty="#{bindings.MDjelatnici1.hints.Ime.name}" sortable="false"
+                     headerText="#{bindings.MDjelatnici1.hints.Ime.label}" id="c3">
+            <tr:inputText value="#{row.bindings.Ime.inputValue}" simple="true"
+                          required="#{bindings.MDjelatnici1.hints.Ime.mandatory}"
+                          columns="#{bindings.MDjelatnici1.hints.Ime.displayWidth}"
+                          maximumLength="#{bindings.MDjelatnici1.hints.Ime.precision}" id="it3">
+              <f:validator binding="#{row.bindings.Ime.validator}"/>
+            </tr:inputText>
+          </tr:column>
+          <tr:column sortProperty="#{bindings.MDjelatnici1.hints.Prezime.name}" sortable="false"
+                     headerText="#{bindings.MDjelatnici1.hints.Prezime.label}" id="c4">
+            <tr:inputText value="#{row.bindings.Prezime.inputValue}" simple="true"
+                          required="#{bindings.MDjelatnici1.hints.Prezime.mandatory}"
+                          columns="#{bindings.MDjelatnici1.hints.Prezime.displayWidth}"
+                          maximumLength="#{bindings.MDjelatnici1.hints.Prezime.precision}" id="it4">
+              <f:validator binding="#{row.bindings.Prezime.validator}"/>
+            </tr:inputText>
+          </tr:column>
+        </tr:table>
+      </h:form>
+    </trh:body>
+  </trh:html>
+  <!--oracle-jdev-comment:deviceCategory:pda-->
+</f:view>

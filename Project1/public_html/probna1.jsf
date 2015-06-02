@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:trh="http://myfaces.apache.org/trinidad/html" xmlns:tr="http://myfaces.apache.org/trinidad">
+    <trh:html id="h1">
+        <trh:head id="h2"/>
+        <trh:body id="b1">
+            <h:form id="f1">
+                <tr:panelHeader text="panelHeader 1" id="ph1" styleClass="af_m_toolbar"/>
+                <tr:panelPageHeader id="pph1" styleClass="af_m_toolbar"/>
+            </h:form>
+        </trh:body>
+    </trh:html>
+    <!--oracle-jdev-comment:deviceCategory:pda-->
+</f:view>
