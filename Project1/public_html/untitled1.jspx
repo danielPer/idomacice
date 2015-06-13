@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html" xmlns:trh="http://myfaces.apache.org/trinidad/html"
+          xmlns:tr="http://myfaces.apache.org/trinidad" xmlns:dvtt="http://xmlns.oracle.com/dss/trinidad/faces">
+    <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+                doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+                doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+    <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+    <f:view>
+        <trh:html>
+            <trh:head title="untitled1">
+            <meta name="viewport" content="width=device-width; initialscale=1.0; maximum-scale=1.0; user-scalable=0;"          
+                  xmlns="http://www.w3.org/1999/xhtml"/> 
+                <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
+            </trh:head>
+            <trh:body>
+                <tr:messages/><h:form>
+                    <tr:table value="#{bindings.MDjelatnici1.collectionModel}" var="row"
+                              rows="#{bindings.MDjelatnici1.rangeSize}"
+                              emptyText="#{bindings.MDjelatnici1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              selectedRowKeys="#{bindings.MDjelatnici1.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.MDjelatnici1.collectionModel.makeCurrent}"
+                              rowSelection="single">
+                        <tr:column sortProperty="#{bindings.MDjelatnici1.hints.Id.name}" sortable="true"
+                                   headerText="#{bindings.MDjelatnici1.hints.Id.label}">
+                            <tr:inputText value="#{row.bindings.Id.inputValue}" simple="true"
+                                          required="#{bindings.MDjelatnici1.hints.Id.mandatory}"
+                                          columns="#{bindings.MDjelatnici1.hints.Id.displayWidth}"
+                                          maximumLength="#{bindings.MDjelatnici1.hints.Id.precision}">
+                                <f:validator binding="#{row.bindings.Id.validator}"/>
+                            </tr:inputText>
+                        </tr:column>
+                        <tr:column sortProperty="#{bindings.MDjelatnici1.hints.Sifra.name}" sortable="true"
+                                   headerText="#{bindings.MDjelatnici1.hints.Sifra.label}">
+                            <tr:inputText value="#{row.bindings.Sifra.inputValue}" simple="true"
+                                          required="#{bindings.MDjelatnici1.hints.Sifra.mandatory}"
+                                          columns="#{bindings.MDjelatnici1.hints.Sifra.displayWidth}"
+                                          maximumLength="#{bindings.MDjelatnici1.hints.Sifra.precision}">
+                                <f:validator binding="#{row.bindings.Sifra.validator}"/>
+                            </tr:inputText>
+                        </tr:column>
+                        <tr:column sortProperty="#{bindings.MDjelatnici1.hints.Ime.name}" sortable="true"
+                                   headerText="#{bindings.MDjelatnici1.hints.Ime.label}">
+                            <tr:inputText value="#{row.bindings.Ime.inputValue}" simple="true"
+                                          required="#{bindings.MDjelatnici1.hints.Ime.mandatory}"
+                                          columns="#{bindings.MDjelatnici1.hints.Ime.displayWidth}"
+                                          maximumLength="#{bindings.MDjelatnici1.hints.Ime.precision}">
+                                <f:validator binding="#{row.bindings.Ime.validator}"/>
+                            </tr:inputText>
+                        </tr:column>
+                        <tr:column sortProperty="#{bindings.MDjelatnici1.hints.Prezime.name}" sortable="true"
+                                   headerText="#{bindings.MDjelatnici1.hints.Prezime.label}">
+                            <tr:inputText value="#{row.bindings.Prezime.inputValue}" simple="true"
+                                          required="#{bindings.MDjelatnici1.hints.Prezime.mandatory}"
+                                          columns="#{bindings.MDjelatnici1.hints.Prezime.displayWidth}"
+                                          maximumLength="#{bindings.MDjelatnici1.hints.Prezime.precision}">
+                                <f:validator binding="#{row.bindings.Prezime.validator}"/>
+                            </tr:inputText>
+                        </tr:column>
+                    </tr:table>
+                    <tr:commandButton actionListener="#{bindings.Create.execute}" text="Create"
+                                      disabled="#{!bindings.Create.enabled}"/>
+                    <tr:commandButton actionListener="#{bindings.Next.execute}" text="Next"
+                                      disabled="#{!bindings.Next.enabled}"/>
+                </h:form>
+            </trh:body>
+        </trh:html>
+    </f:view>
+    <!--oracle-jdev-comment:deviceCategory:pda-->
+</jsp:root>

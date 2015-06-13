@@ -2,12 +2,12 @@
 <Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.64.36" id="DataBindings"
              SeparateXMLFiles="false" Package="hr.fet.idomacice" ClientType="Generic">
   <pageMap>
-    <page path="/untitled1.jsf" usageId="hr_fet_idomacice_untitled1PageDef"/>
-    <page path="/probna.jsf" usageId="hr_fet_idomacice_probnaPageDef"/>
+    <page path="/untitled1.jspx" usageId="hr_fet_idomacice_untitled1PageDef"/>
+    <page path="/untitled2.jspx" usageId="hr_fet_idomacice_untitled2PageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="hr_fet_idomacice_untitled1PageDef" path="hr.fet.idomacice.pageDefs.untitled1PageDef"/>
-    <page id="hr_fet_idomacice_probnaPageDef" path="hr.fet.idomacice.pageDefs.probnaPageDef"/>
+    <page id="hr_fet_idomacice_untitled2PageDef" path="hr.fet.idomacice.pageDefs.untitled2PageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="hr.fet.idomacice.model"

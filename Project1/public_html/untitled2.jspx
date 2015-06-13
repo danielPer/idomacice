@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html" xmlns:trh="http://myfaces.apache.org/trinidad/html"
+          xmlns:tr="http://myfaces.apache.org/trinidad" xmlns:dvtt="http://xmlns.oracle.com/dss/trinidad/faces">
+    <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+                doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+                doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <trh:html id="h1">
+            <trh:head id="h2">
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+            </trh:head>
+            <trh:body id="b1">
+                <tr:messages id="m1"/><h:form id="f1">
+                    <tr:table value="#{bindings.MOzn1View1.collectionModel}" var="row"
+                              rows="#{bindings.MOzn1View1.rangeSize}"
+                              emptyText="#{bindings.MOzn1View1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              selectedRowKeys="#{bindings.MOzn1View1.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.MOzn1View1.collectionModel.makeCurrent}"
+                              rowSelection="single" id="t1" width="363" inlineStyle="0">
+                        <tr:column sortProperty="#{bindings.MOzn1View1.hints.Id.name}" sortable="true"
+                                   headerText="#{bindings.MOzn1View1.hints.Id.label}" id="c1">
+                            <tr:inputText value="#{row.bindings.Id.inputValue}" simple="true"
+                                          required="#{bindings.MOzn1View1.hints.Id.mandatory}"
+                                          columns="#{bindings.MOzn1View1.hints.Id.displayWidth}"
+                                          maximumLength="#{bindings.MOzn1View1.hints.Id.precision}" id="it1">
+                                <f:validator binding="#{row.bindings.Id.validator}"/>
+                            </tr:inputText>
+                        </tr:column>
+                        <tr:column sortProperty="#{bindings.MOzn1View1.hints.Opis.name}" sortable="true"
+                                   headerText="#{bindings.MOzn1View1.hints.Opis.label}" id="c2">
+                            <tr:inputText value="#{row.bindings.Opis.inputValue}" simple="true"
+                                          required="#{bindings.MOzn1View1.hints.Opis.mandatory}"
+                                          columns="#{bindings.MOzn1View1.hints.Opis.displayWidth}"
+                                          maximumLength="#{bindings.MOzn1View1.hints.Opis.precision}" id="it2">
+                                <f:validator binding="#{row.bindings.Opis.validator}"/>
+                            </tr:inputText>
+                        </tr:column>
+                    </tr:table>
+                    <tr:commandNavigationItem text="commandNavigationItem 1" id="cni1"/>
+                    <tr:commandButton text="Botun" id="cb1"/>
+                </h:form>
+            </trh:body>
+        </trh:html>
+    </f:view>
+    <!--oracle-jdev-comment:deviceCategory:pda-->
+</jsp:root>

@@ -21,7 +21,14 @@
     PrecisionRule="true"
     EntityAttrName="Id"
     EntityUsage="MOzn1"
-    AliasName="ID"/>
+    AliasName="ID">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="hr.fet.idomacice.model.MOzn1View.Id_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Opis"
     IsNotNull="true"
@@ -29,4 +36,8 @@
     EntityAttrName="Opis"
     EntityUsage="MOzn1"
     AliasName="OPIS"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="hr.fet.idomacice.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

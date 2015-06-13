@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.64.36" id="untitled2PageDef"
+                Package="hr.fet.idomacice.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="MOzn1View1" RangeSize="25" DataControl="AppModuleDataControl" id="MOzn1View1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="MOzn1View1Iterator" id="MOzn1View1">
+      <nodeDefinition DefName="hr.fet.idomacice.model.MOzn1View" Name="MOzn1View10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Opis"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
