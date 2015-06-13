@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
-                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core">
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core"
+                    id="id">
     <af:xmlContent>
         <afc:component>
             <afc:display-name>templateDef1</afc:display-name>
